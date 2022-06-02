@@ -19,8 +19,6 @@ class Clothes(ABC):
     @abstractmethod
     def expense(self):
         pass
-    def __str__(self):
-        return str(self.param)
 
 class Coat(Clothes):
     @property
@@ -32,8 +30,7 @@ class Suit(Clothes):
     def expense(self):
         return self.param * 2 + 0.3
 
-a = Coat(52)
-b = Suit(1.80)
-print(a)
-print(a.expense)
-print(b.expense)
+a = Coat(48)
+b = Suit(1.75)
+print(round(a.expense, 3))
+print(round(b.expense, 3))
